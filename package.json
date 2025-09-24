@@ -1,0 +1,61 @@
+{
+  "name": "testcodelab",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sakchonma/testcodelab#readme",
+  "bugs": {
+    "url": "https://github.com/sakchonma/testcodelab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakchonma/testcodelab.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "start:dev": "tsc -p . && nodemon dist/app.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "express-jwt": "^8.5.1",
+    "helmet": "^8.1.0",
+    "http-status-codes": "^2.2.0",
+    "ioredis": "^5.7.0",
+    "joi": "^18.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.1",
+    "morgan": "^1.10.1",
+    "postman-collection": "^5.1.1",
+    "postman-to-openapi": "^1.7.3",
+    "redis": "^5.8.2",
+    "swagger-ui-express": "^5.0.1",
+    "yaml": "^2.8.1",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/lodash": "^4.17.20",
+    "@types/mongodb": "^4.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^20.4.2",
+    "@types/postman-collection": "^3.5.11",
+    "@types/redis": "^4.0.10",
+    "@types/swagger-ui-express": "^4.1.8",
+    "@types/yamljs": "^0.2.34",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.2.2"
+  }
+}
