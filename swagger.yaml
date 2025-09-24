@@ -1,0 +1,457 @@
+openapi: 3.0.0
+info:
+  title: codelab
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:3000'
+  -
+    url: 'undefined://localhost:3000'
+tags:
+  -
+    name: profile
+  -
+    name: product
+  -
+    name: category
+  -
+    name: promotion
+paths:
+  /api/profile/register:
+    post:
+      tags:
+        - profile
+      summary: register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: admin
+                email: admin@hotmail.com
+                password: 12345678@Admin
+                confirmPassword: 12345678@Admin
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/profile/login:
+    post:
+      tags:
+        - profile
+      summary: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: admin@hotmail.com
+                password: 12345678@Admin
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/profile/list:
+    post:
+      tags:
+        - profile
+      summary: list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                page: 1
+                limit: 10
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/profile/68d351e58c3e4c9be4e2f065:
+    get:
+      tags:
+        - profile
+      summary: getUserById
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/profile/update/68d355a48c3e4c9be4e2f071:
+    put:
+      tags:
+        - profile
+      summary: editUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: admin
+                email: admin@hotmail.com
+                role: admin
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/profile/delete/68c3f3d5c4ea6502c5deb2bb:
+    delete:
+      tags:
+        - profile
+      summary: deleteUser
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/profile/allredis:
+    get:
+      tags:
+        - profile
+      summary: allredis
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/product/create:
+    post:
+      tags:
+        - product
+      summary: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: น้ำหอม3
+                description: admin@hotmail.com
+                images:
+                  - 'https://www.youtube.com/'
+                categoryId: 68d37b3d32b5d2f459c4eac5
+                price: 10.5
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/product/list:
+    post:
+      tags:
+        - product
+      summary: list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                page: 1
+                limit: 10
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/product/get/68d3977fd29d541b438b6085:
+    get:
+      tags:
+        - product
+      summary: getProduct
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/product/update/68d37c215832d54320037105:
+    put:
+      tags:
+        - product
+      summary: editProduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: น้ำหอม1
+                description: admin@hotmail.com
+                images:
+                  - 'https://www.youtube.com/'
+                categoryId: 68d37b3d32b5d2f459c4eac5
+                price: 10.5
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/product/delete/68d37c215832d54320037105:
+    delete:
+      tags:
+        - product
+      summary: deleteProduct
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/category/create:
+    post:
+      tags:
+        - category
+      summary: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Beauty
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/category/list:
+    post:
+      tags:
+        - category
+      summary: list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                page: 1
+                limit: 10
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/category/get/68d37b3d32b5d2f459c4eac5:
+    get:
+      tags:
+        - category
+      summary: getCategory
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/category/update/68d37b3d32b5d2f459c4eac5:
+    put:
+      tags:
+        - category
+      summary: editCategory
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Beautys
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/category/delete/68d377ee32b5d2f459c4eaa3:
+    delete:
+      tags:
+        - category
+      summary: deleteCategory
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/promotion/create:
+    post:
+      tags:
+        - promotion
+      summary: 'create PRODUCT'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: 'Flash Sale 5% PRODUCT'
+                description: 'ลดราคาสินค้า A 5%'
+                discountType: PERCENT
+                discountValue: 30
+                startDate: '2025-09-20T00:00:00.000Z'
+                endDate: '2025-09-30T23:59:59.000Z'
+                isFlashSale: true
+                flashSaleStart: '2025-09-22T18:00:00.000Z'
+                flashSaleEnd: '2025-09-25T12:00:00.000Z'
+                scopes:
+                  - {scopeType: PRODUCT, refId: 68d3977fd29d541b438b6085}
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/promotion/list:
+    post:
+      tags:
+        - promotion
+      summary: list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                page: 1
+                limit: 10
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/promotion/update/68d3abaf44baecc8c318c242:
+    put:
+      tags:
+        - promotion
+      summary: editPromotion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: 'Flash Sale 30%'
+                description: 'ลดราคาสินค้า A 10%'
+                discountType: PERCENT
+                discountValue: 10
+                startDate: '2025-09-25T00:00:00.000Z'
+                endDate: '2025-09-30T23:59:59.000Z'
+                isFlashSale: true
+                flashSaleStart: '2025-09-25T10:00:00.000Z'
+                flashSaleEnd: '2025-09-25T12:00:00.000Z'
+                scopes: []
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/promotion/get/68d3d0b61e38bc718d56fe0d:
+    get:
+      tags:
+        - promotion
+      summary: getPromotion
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/promotion/flashsale:
+    get:
+      tags:
+        - promotion
+      summary: getFlashSales
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+  /api/promotion/delete/68d3bbfb1e38bc718d56fdf0:
+    delete:
+      tags:
+        - promotion
+      summary: deletePromotion
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json: {}
+      security:
+        -
+          BearerAuth: []
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  -
+    BearerAuth: []
