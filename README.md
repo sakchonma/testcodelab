@@ -1,15 +1,8 @@
 # testcodelab
-/product/list
-/product/create
+//คำสั่ง run dev 
+    -npm run start:dev
 
-/promotion/list
-/promotion/create
-reduce
-    -price
-    -percent
-category or product
-    -all        -select
-startDate endDate
+//คำสั่ง run prod 
+    -npm run build
+    -npm run start
 
-/categoty/list
-/categoty/create
